@@ -12,7 +12,7 @@ amounts of input data.
 Install package:
 
 ```bash
-go lnstall https://github.com/koddr/json2csv@latest
+go install https://github.com/koddr/json2csv@latest
 ```
 
 Next, run `json2csv` parser:
