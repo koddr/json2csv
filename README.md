@@ -90,7 +90,7 @@ robots by [Vic Shóstak][author].
 [go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
 [go_report_url]: https://goreportcard.com/report/github.com/koddr/json2csv
 [code_coverage_img]: https://img.shields.io/badge/code_coverage-98%25-success?style=for-the-badge&logo=none
-[wiki_img]: https://img.shields.io/badge/-wiki_page-blue?style=for-the-badge&logo=wikipedia
+[wiki_img]: https://img.shields.io/badge/docs-wiki_page-blue?style=for-the-badge&logo=none
 [wiki_url]: https://github.com/koddr/json2csv/wiki
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
 [wiki_filter_url]: https://github.com/koddr/json2csv/wiki#filter
