@@ -27,28 +27,22 @@ func (c *config) filter(s string) bool {
 		return false
 	}
 
+	// Filter the given words.
 	for key, words := range skipWords {
-		if key == "skip_prefix" && len(words) > 0 {
+		switch key {
+		case "skip_prefixes":
 			for _, word := range words {
 				if strings.HasPrefix(strings.ToLower(s), strings.ToLower(word)) {
 					return false
 				}
 			}
-		}
-	}
-
-	for key, words := range skipWords {
-		if key == "skip_suffix" && len(words) > 0 {
+		case "skip_suffixes":
 			for _, word := range words {
 				if strings.HasSuffix(strings.ToLower(s), strings.ToLower(word)) {
 					return false
 				}
 			}
-		}
-	}
-
-	for key, words := range skipWords {
-		if key == "skip_words" && len(words) > 0 {
+		case "skip_words":
 			for _, word := range words {
 				if strings.Contains(strings.ToLower(s), strings.ToLower(word)) {
 					return false

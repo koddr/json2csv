@@ -13,7 +13,7 @@ func main() {
 	intentsPath := flag.String("intents", "./intents.json", "set path to JSON file with intents dictionary")
 	filterPath := flag.String("filter", "./filter.json", "set path to JSON file with filter dictionary")
 	outputPath := flag.String("output", "./output_files", "set path to folder for output CSV files")
-	contentAttr := flag.String("content", "content", "set name of the content attribute in your JSON struct")
+	contentField := flag.String("content-field", "content", "set name of the content field in your JSON struct")
 	minWordLen := flag.Int("min-word-len", 0, "set min length of word to parse from JSON files")
 	chunkSize := flag.Int("chunk", 5000, "set chunk size for output CSV file")
 
@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("\nConfig for this session is creating now. Please wait...")
 
 	// Create a new parse session with the given configs from flags.
-	session, err := newSession(*jsonPath, *intentsPath, *filterPath, *outputPath, *contentAttr, *minWordLen, *chunkSize)
+	session, err := newSession(*jsonPath, *intentsPath, *filterPath, *outputPath, *contentField, *minWordLen, *chunkSize)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -36,7 +36,7 @@ func main() {
 	fmt.Printf(" – file with intents dictionary is '%s'\n", *intentsPath)
 	fmt.Printf(" – file with filter dictionary is '%s'\n", *filterPath)
 	fmt.Printf(" – folder for output CSV files is '%s'\n", *outputPath)
-	fmt.Printf(" – name of the content attribute is '%s'\n", *contentAttr)
+	fmt.Printf(" – name of the content field is '%s'\n", *contentField)
 	fmt.Printf(" – min length of word to parse is %d letters\n", *minWordLen)
 	fmt.Printf(" – chunk size for output CSV file is %d (per file)\n", *chunkSize)
 	fmt.Println("\nParser is starting now. Please wait...")

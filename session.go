@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-func newSession(jsonPath, intentsPath, filterPath, outputPath, contentAttr string, minWordLen, chunkSize int) (*config, error) {
+func newSession(jsonPath, intentsPath, filterPath, outputPath, contentField string, minWordLen, chunkSize int) (*config, error) {
 	if minWordLen < 0 {
 		return nil, errors.New("can't parse data with negative word count")
 	}
@@ -15,7 +15,7 @@ func newSession(jsonPath, intentsPath, filterPath, outputPath, contentAttr strin
 		return nil, errors.New("can't create CSV chunk file with zero (or negative) size")
 	}
 
-	if contentAttr == "" {
+	if contentField == "" {
 		return nil, errors.New("can't parse data without content name attribute")
 	}
 
@@ -52,7 +52,7 @@ func newSession(jsonPath, intentsPath, filterPath, outputPath, contentAttr strin
 		intentsFile:  intentsFile,
 		filterFile:   filterFile,
 		outputFolder: filepath.Clean(outputPath),
-		contentAttr:  contentAttr,
+		contentField: contentField,
 		jsonFolder:   jsonFolder{path: jsonPath, files: jsonFiles},
 	}, nil
 }
