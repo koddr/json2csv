@@ -95,6 +95,6 @@ robots by [Vic Shóstak][author].
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
 [wiki_filter_url]: https://github.com/koddr/json2csv/wiki#filter
 [license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
-[license_url]: https://github.com/koddr/json2csv/LICENSE
+[license_url]: https://github.com/koddr/json2csv/blob/main/LICENSE
 [json2csv_url]: https://github.com/koddr/json2csv
 [author]: https://github.com/koddr
