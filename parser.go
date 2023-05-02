@@ -44,7 +44,7 @@ func (c *config) parse() error {
 		for _, r := range result {
 			// Skip unneeded fields and content points and append a current result to the
 			// main results slice.
-			if c.filter(r[c.contentAttr]) {
+			if c.filter(r[c.contentField]) {
 				results = append(results, r)
 			}
 		}
