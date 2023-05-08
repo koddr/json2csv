@@ -2,7 +2,6 @@
 
 ![Go version][go_version_img]
 [![Go report][go_report_img]][go_report_url]
-![Code coverage][code_coverage_img]
 [![Wiki][wiki_img]][wiki_url]
 [![License][license_img]][license_url]
 
@@ -25,10 +24,8 @@ go install https://github.com/koddr/json2csv@latest
 ```
 
 Prepare folder with your data source (format `*.json`) and create JSON files 
-with:
-
-- intents (for ex., `intents-file.json`); 
-- filter (for ex., `filter-file.json`);
+with intents (for example, `intents-file.json`) and filter (for example, 
+`filter-file.json`).
 
 > 💡 Note: see the [`Wiki`][wiki_url] page to understand structures of 
 > JSON files and get general recommendations for preparing the input data. 
