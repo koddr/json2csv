@@ -51,7 +51,7 @@ json2csv \
 ## 🧩 Options
 
 - `-json [path]` is an option to set a path to the folder with JSON source
-  file(s);
+  file(s) (see [Wiki][wiki_json_folder_url]);
 - `-intents [path]` is an option to set a path to the file with intents (see 
   [Wiki][wiki_intents_url]);
 - `-filter [path]` is an option to set a path to the file with a filter (see 
@@ -94,6 +94,7 @@ robots by [Vic Shóstak][author].
 [wiki_url]: https://github.com/koddr/json2csv/wiki
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
 [wiki_filter_url]: https://github.com/koddr/json2csv/wiki#filter
+[wiki_json_folder_url]: https://github.com/koddr/json2csv/wiki#folder-with-json-files
 [license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
 [license_url]: https://github.com/koddr/json2csv/blob/main/LICENSE
 [json2csv_url]: https://github.com/koddr/json2csv
