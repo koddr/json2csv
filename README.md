@@ -2,6 +2,7 @@
 
 ![Go version][go_version_img]
 [![Go report][go_report_img]][go_report_url]
+![Code coverage][code_coverage_img]
 [![Wiki][wiki_img]][wiki_url]
 [![License][license_img]][license_url]
 
@@ -23,9 +24,9 @@ Installation is done by using the [`go install`][go_install] command:
 go install https://github.com/koddr/json2csv@latest
 ```
 
-Prepare folder with your data source (format `*.json`) and create JSON files 
-with intents (for example, `intents-file.json`) and filter (for example, 
-`filter-file.json`).
+Prepare folder with your data source in the `*.json` format, create JSON files 
+with intents and filter (for example, `intents-file.json` and `filter-file.
+json`).
 
 > 💡 Note: see the [`Wiki`][wiki_url] page to understand structures of 
 > JSON files and get general recommendations for preparing the input data. 
@@ -86,7 +87,7 @@ robots by [Vic Shóstak][author].
 [go_version_img]: https://img.shields.io/badge/Go-1.20+-00ADD8?style=for-the-badge&logo=go
 [go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
 [go_report_url]: https://goreportcard.com/report/github.com/koddr/json2csv
-[code_coverage_img]: https://img.shields.io/badge/code_coverage-98%25-success?style=for-the-badge&logo=none
+[code_coverage_img]: https://img.shields.io/badge/code_coverage-in_progress-success?style=for-the-badge&logo=none
 [wiki_img]: https://img.shields.io/badge/docs-wiki_page-blue?style=for-the-badge&logo=none
 [wiki_url]: https://github.com/koddr/json2csv/wiki
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
