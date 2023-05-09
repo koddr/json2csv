@@ -21,7 +21,7 @@ func (c *config) save(source []map[string]string) error {
 	defer writer.Flush()
 
 	// Write the header of the CSV file.
-	header := []string{"content", "intent"}
+	header := []string{c.contentField, "intent"}
 	if err = writer.Write(header); err != nil {
 		return err
 	}
