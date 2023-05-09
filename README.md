@@ -48,17 +48,20 @@ json2csv \
 
 ## 🧩 Options
 
-- `-json [path]` is an option to set a path to the folder with JSON source
+- `-json [path]` is an option to set a **path** to the folder with JSON source
   file(s) (see [Wiki][wiki_json_folder_url]);
-- `-intents [path]` is an option to set a path to the file with intents (see 
-  [Wiki][wiki_intents_url]);
-- `-filter [path]` is an option to set a path to the file with a filter (see 
-  [Wiki][wiki_filter_url]);
-- `-content-field [string]` is an option to set a name of the content field
+- `-intents [path]` is an option to set a **path** to the file with intents 
+  (see [Wiki][wiki_intents_url]);
+- `-filter [path]` is an option to set a **path** to the file with a filter 
+  (see [Wiki][wiki_filter_url]);
+- `-output [path]` is an option to set a **path** to the output folder where 
+  the prepared CSV file(s) will be placed (see [Wiki][wiki_output_folder_url]);
+- `-content-field [string]` is an option to set a **name of the content field**
   (attribute that contains string to qualify and filter) in JSON source file(s);
-- `-min-word-len [int]` is an option to set a min word length count to filter
-  input words (if a word is smaller than this option, it will be skipped);
-- `-chunk [int]` is an option to set a chunk size for one CSV file;
+- `-min-word-len [int]` is an option to set a **min word length count** to 
+  filter input words (if a word is smaller than this option, it will be 
+  skipped);
+- `-chunk [int]` is an option to set a **chunk size** for one CSV file;
 
 ## ✨ Solving case
 
@@ -93,6 +96,7 @@ robots by [Vic Shóstak][author].
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
 [wiki_filter_url]: https://github.com/koddr/json2csv/wiki#filter
 [wiki_json_folder_url]: https://github.com/koddr/json2csv/wiki#folder-with-json-files
+[wiki_output_folder_url]: https://github.com/koddr/json2csv/wiki#folder-with-output-csv-files
 [license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
 [license_url]: https://github.com/koddr/json2csv/blob/main/LICENSE
 [json2csv_url]: https://github.com/koddr/json2csv
