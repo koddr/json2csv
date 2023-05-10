@@ -15,16 +15,16 @@ even on large amounts of the input JSON data.
 
 ## ⚡️ Quick start
 
-First, [download][go_download] and install **Go**. Version `1.20` or higher 
+First, [download][go_download] and install **Go**. Version `1.20` (or higher) 
 is required. 
 
 Installation is done by using the [`go install`][go_install] command:
 
 ```console
-go install https://github.com/koddr/json2csv@latest
+go install github.com/koddr/json2csv@latest
 ```
 
-Prepare folder with your data source in the `*.json` format, create JSON files 
+Prepare folder with your data input in the `*.json` format, create JSON files 
 with intents and filter. See the [`Wiki`][wiki_url] page to understand 
 structures of JSON files and get general recommendations for preparing the 
 input data.
