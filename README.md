@@ -20,7 +20,7 @@ is required.
 
 Installation is done by using the [`go install`][go_install] command:
 
-```bash
+```console
 go install https://github.com/koddr/json2csv@latest
 ```
 
@@ -31,7 +31,7 @@ files and get general recommendations for preparing the input data.
 
 Next, run `json2csv` parser with (or without) options:
 
-```bash
+```console
 json2csv \
   -json    /path/to/input/json/folder \
   -intents /path/to/intents-file.json \
