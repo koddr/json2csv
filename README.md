@@ -26,10 +26,8 @@ go install https://github.com/koddr/json2csv@latest
 
 Prepare folder with your data source in the `*.json` format, create JSON files 
 with intents and filter (for example, `intents-file.json` and `filter-file.
-json`).
-
-> 💡 Note: see the [`Wiki`][wiki_url] page to understand structures of 
-> JSON files and get general recommendations for preparing the input data. 
+json`). See the [`Wiki`][wiki_url] page to understand structures of JSON 
+files and get general recommendations for preparing the input data.
 
 Next, run `json2csv` parser with (or without) options:
 
