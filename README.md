@@ -25,11 +25,13 @@ go install github.com/koddr/json2csv@latest
 ```
 
 Prepare folder with your data input in the `*.json` format, create JSON files 
-with intents and filter. See the [`Wiki`][wiki_url] page to understand 
-structures of JSON files and get general recommendations for preparing the 
-input data.
+with intents and filter. 
 
-Next, run `json2csv` parser with (or without) options:
+> 💡 Note: See the repository's [Wiki page][wiki_url] to understand 
+> structures of JSON files and get general recommendations for preparing the 
+> input data.
+
+Next, run `json2csv` parser with options:
 
 ```console
 json2csv \
@@ -42,7 +44,7 @@ json2csv \
   -chunk 1000
 ```
 
-> 💡 Note: output CSV file has a default comma (`,`) separators between columns.
+Done! 🎉 Output CSV file(s) has a default comma (`,`) separators between columns.
 
 ## 🧩 Options
 
