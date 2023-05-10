@@ -3,10 +3,13 @@ package main
 import "os"
 
 type config struct {
-	minWordLen, chunkSize      int
-	intentsFile, filterFile    []byte
-	outputFolder, contentField string
-	jsonFolder                 jsonFolder
+	outputFolder string
+	contentField string
+	jsonFolder   jsonFolder
+	intentsFile  []byte
+	filterFile   []byte
+	minWordLen   int
+	chunkSize    int
 }
 
 type jsonFolder struct {
