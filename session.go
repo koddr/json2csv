@@ -6,7 +6,11 @@ import (
 	"path/filepath"
 )
 
-func newSession(jsonPath, intentsPath, filterPath, outputPath, contentField string, minWordLen, chunkSize int) (*config, error) {
+// newSession provides init configuration for the parsing session.
+func newSession(
+	jsonPath, intentsPath, filterPath, outputPath, contentField string,
+	minWordLen, chunkSize int,
+) (*config, error) {
 	if minWordLen < 0 {
 		return nil, errors.New("can't parse data with negative word count")
 	}

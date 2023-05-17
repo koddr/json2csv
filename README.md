@@ -1,6 +1,6 @@
 # json2csv – Parse JSON files to CSV with data qualifier
 
-![Go version][go_version_img]
+[![Go version][go_version_img]][json2csv_go_dev_url]
 [![Go report][go_report_img]][go_report_url]
 ![Code coverage][code_coverage_img]
 [![Wiki][wiki_img]][wiki_url]
@@ -97,4 +97,5 @@ robots by [Vic Shóstak][author].
 [license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
 [license_url]: https://github.com/koddr/json2csv/blob/main/LICENSE
 [json2csv_url]: https://github.com/koddr/json2csv
+[json2csv_go_dev_url]: https://pkg.go.dev/github.com/koddr/json2csv
 [author]: https://github.com/koddr

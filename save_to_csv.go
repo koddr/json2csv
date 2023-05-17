@@ -7,13 +7,19 @@ import (
 	"time"
 )
 
+// save provides saving operation for source map.
 func (c *config) save(source []map[string]string) error {
 	// Create a new file to collect CSV data.
 	outputFile, err := os.Create(fmt.Sprintf("%s/%d.csv", c.outputFolder, time.Now().Unix()))
 	if err != nil {
 		return err
 	}
-	defer outputFile.Close()
+	defer func(outputFile *os.File) {
+		err := outputFile.Close()
+		if err != nil {
+
+		}
+	}(outputFile)
 
 	// Write the header of the CSV file and the successive rows by iterating through
 	// the JSON struct array.

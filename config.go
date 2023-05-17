@@ -2,6 +2,7 @@ package main
 
 import "os"
 
+// config presents struct for the configuration.
 type config struct {
 	outputFolder string
 	contentField string
@@ -12,6 +13,7 @@ type config struct {
 	chunkSize    int
 }
 
+// jsonFolder presents struct for the folder with JSON sources.
 type jsonFolder struct {
 	path  string
 	files []os.DirEntry

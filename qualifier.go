@@ -7,6 +7,7 @@ import (
 	jsoniter "github.com/json-iterator/go"
 )
 
+// qualify provides a qualifier for the given string.
 func (c *config) qualify(s string) string {
 	// Skip empty strings.
 	if s == "" {

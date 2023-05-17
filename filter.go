@@ -7,6 +7,7 @@ import (
 	jsoniter "github.com/json-iterator/go"
 )
 
+// filter provides rule sets for the input string to skip specified values.
 func (c *config) filter(s string) bool {
 	// Skip empty strings.
 	if s == "" {

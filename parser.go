@@ -9,6 +9,7 @@ import (
 	jsoniter "github.com/json-iterator/go"
 )
 
+// parse provides the parsing process.
 func (c *config) parse() error {
 	// Create slice for results.
 	results := make([]map[string]string, 0, len(c.jsonFolder.files))
