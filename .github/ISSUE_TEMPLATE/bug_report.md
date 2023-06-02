@@ -4,7 +4,6 @@ about: Create a report to help us improve
 title: ''
 labels: bug, help wanted
 assignees: koddr
-
 ---
 
 **Required check list:**
@@ -25,10 +24,9 @@ assignees: koddr
 
 **Steps to reproduce the behavior:**
 
-1. Go to ...
-2. Click on ...
+1. ...
+2. ...
 3. ...
-4. See error
 
 **Expected behavior:**
 

@@ -1,10 +1,9 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for this project.
 title: ''
 labels: enhancement
 assignees: koddr
-
 ---
 
 <!-- ⚡️ Please create a discussion BEFORE submitting a pull request for 
@@ -19,7 +18,7 @@ a new feature ⚡️ -->
 
 **Is your feature request related to a problem? Please describe.**
 
-<!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->
+<!-- A clear and concise description of what the problem is. -->
 
 **Describe the solution you'd like:**
 
