@@ -79,7 +79,7 @@ brews:
         enabled: true
       git:
         url: "git@github.com:koddr/homebrew-tap.git"
-        private_key: "{{ .Env.PRIVATE_KEY_PATH }}"
+        private_key: ~/.ssh/id_ed25519
     commit_author:
       name: Vic Shóstak
       email: koddr.me@gmail.com
@@ -102,13 +102,31 @@ brews:
     skip_upload: false
 
 nfpms:
-  -
-    maintainer: Vic Shóstak <koddr.me@gmail.com>
+  - maintainer: Vic Shóstak <koddr.me@gmail.com>
     description: |
       The parser can read given folder with *.json files, filtering and qualifying input data with intent & stop words dictionaries and save results to CSV files by given chunk size.
     homepage: "https://github.com/koddr/{{ .ProjectName }}"
     license: Apache 2.0
     formats: [ deb, rpm, apk, archlinux ]
+
+dockers:
+  - id: "{{ .ProjectName }}"
+    ids: [ default ]
+    image_templates:
+      - "koddr/{{ .ProjectName }}:latest"
+      - "koddr/{{ .ProjectName }}:{{ .Tag }}"
+      - "koddr/{{ .ProjectName }}:v{{ .Major }}"
+      - "koddr/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}"
+    build_flag_templates:
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{ .Date }}"
+      - "--label=org.opencontainers.image.title={{ .ProjectName }}"
+      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+      - "--label=org.opencontainers.image.version={{ .Version }}"
+      - "--platform=linux/amd64"
+    skip_push: false
+    push_flags:
+      - --tls-verify=false
 
 archives:
   - format_overrides:
@@ -126,16 +144,16 @@ changelog:
     exclude: [ "^*.md:", "^*.ya?ml:" ]
   groups:
     - title: Features
-      regexp: "^.*?feature(\([[:word:]]+\))??!?:.+$"
+      regexp: ^.*?feature(\([[:word:]]+\))??!?:.+$
       order: 0
     - title: Bug fixes
-      regexp: "^.*?bug(\([[:word:]]+\))??!?:.+$"
+      regexp: ^.*?bug(\([[:word:]]+\))??!?:.+$
       order: 1
     - title: Updates
-      regexp: "^.*?update(\([[:word:]]+\))??!?:.+$"
+      regexp: ^.*?update(\([[:word:]]+\))??!?:.+$
       order: 2
     - title: Security issues
-      regexp: "^.*?security(\([[:word:]]+\))??!?:.+$"
+      regexp: ^.*?security(\([[:word:]]+\))??!?:.+$
       order: 3
     - title: Others
       order: 999
