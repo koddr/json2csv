@@ -78,8 +78,7 @@ nfpms:
     formats: [ deb, rpm, apk, archlinux ]
 
 archives:
-  -
-    format_overrides:
+  - format_overrides:
       - goos: windows
         format: zip
     files: [ LICENSE, README.md ]
@@ -87,3 +86,10 @@ archives:
 
 checksum:
   name_template: "checksums.txt"
+
+changelog:
+  use: github
+  sort: asc
+  abbrev: -1
+  filters:
+    exclude: [ "^*.md:" ]
