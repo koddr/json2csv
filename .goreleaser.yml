@@ -124,7 +124,7 @@ dockers:
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--platform=linux/amd64"
-    skip_push: false
+    skip_push: true
     push_flags:
       - --tls-verify=false
 
