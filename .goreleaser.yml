@@ -39,6 +39,7 @@ brews:
         enabled: true
       git:
         url: "ssh://git@github.com:koddr/homebrew-tap.git"
+        private_key: "{{ .Env.PRIVATE_KEY_PATH }}"
     commit_author:
       name: Vic Shóstak
       email: koddr.me@gmail.com
