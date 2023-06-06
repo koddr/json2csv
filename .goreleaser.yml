@@ -21,16 +21,56 @@ builds:
     goarch: [ amd64, arm64 ]
 
 upx:
-  -
-    ids: [ default ]
+  - ids: [ default ]
     enabled: true
     compress: best
     lzma: true
     brute: true
 
+release:
+  ids: [ default, macOS_only ]
+  draft: true
+  replace_existing_draft: true
+  target_commitish: "{{ .Commit }}"
+  #  discussion_category_name: General
+  prerelease: auto
+  mode: replace
+  header: |
+    ## ⚙️ The `{{ .Tag }}` release
+  footer: |
+    ## Install or update
+    
+    For native Go installation (any platforms):
+    
+    ```console
+    go install github.com/koddr/json2csv@latest
+    ```
+
+    For [Homebrew][brew_url] users (GNU/Linux, macOS):
+    
+    ```console
+    brew upgrade koddr/tap/json2csv
+    ```
+    
+    > 💡 Note: See the [`Wiki page`][wiki_url] to understand structures of JSON files and get general recommendations for preparing the input data.
+    
+    ## Your help to improve project
+    
+    I'd be truly grateful for help with:
+    
+    - Creating tests (and/or benchmarks) for code
+    - Improving existing functions, structs, or tests
+    - Feature requests with interesting functions that would be good to add
+    
+    Your PRs & issues are welcome! Thanks 😉
+    
+    [brew_url]: https://brew.sh
+    [wiki_url]: https://github.com/koddr/json2csv/wiki
+  disable: false
+  skip_upload: false
+
 brews:
-  -
-    tap:
+  - tap:
       owner: koddr
       name: homebrew-tap
       branch: main

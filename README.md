@@ -1,6 +1,6 @@
 # json2csv – Parse JSON files to CSV with data qualifier
 
-[![Go version][go_version_img]][json2csv_go_dev_url]
+[![Go version][go_version_img]][go_dev_url]
 [![Go report][go_report_img]][go_report_url]
 ![Code coverage][code_coverage_img]
 [![Wiki][wiki_img]][wiki_url]
@@ -15,8 +15,8 @@ even on large amounts of the input JSON data.
 
 ## ⚡️ Quick start
 
-First, [download][go_download] and install **Go**. Version `1.20` (or higher) 
-is required. 
+First, [download][go_download] and install **Go**. Version `1.20` (or higher)
+is required.
 
 Installation is done by using the [`go install`][go_install] command:
 
@@ -24,11 +24,24 @@ Installation is done by using the [`go install`][go_install] command:
 go install github.com/koddr/json2csv@latest
 ```
 
-Prepare folder with your data input in the `*.json` format, create JSON files 
-with intents and filter. 
+GNU/Linux and macOS users available way to install via [Homebrew][brew_url]:
 
-> 💡 Note: See the repository's [Wiki page][wiki_url] to understand 
-> structures of JSON files and get general recommendations for preparing the 
+```console
+# Tap a new formula:
+brew tap koddr/tap
+
+# Installation:
+brew install koddr/tap/json2csv
+```
+
+> 💡 Note: See the repository's [Release page][repo_release_url], if you want
+> to download a ready-made `deb`, `rpm`, `apk` or `Arch Linux` package.
+
+Prepare folder with your data input in the `*.json` format, create JSON files
+with intents and filter.
+
+> 💡 Note: See the repository's [Wiki page][wiki_url] to understand
+> structures of JSON files and get general recommendations for preparing the
 > input data.
 
 Next, run `json2csv` parser with options:
@@ -78,24 +91,44 @@ This is what this Go package solves! ✌️
 
 ## ⚠️ License
 
-[`json2csv`][json2csv_url] is free and open-source software licensed under the
+[`json2csv`][repo_url] is free and open-source software licensed under the
 [Apache 2.0 License][license_url], created and supported with 🩵 for people and
 robots by [Vic Shóstak][author].
 
 [go_download]: https://golang.org/dl/
+
 [go_install]: https://golang.org/cmd/go/#hdr-Compile_and_install_packages_and_dependencies
+
 [go_version_img]: https://img.shields.io/badge/Go-1.20+-00ADD8?style=for-the-badge&logo=go
+
 [go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
+
 [go_report_url]: https://goreportcard.com/report/github.com/koddr/json2csv
+
 [code_coverage_img]: https://img.shields.io/badge/code_coverage-in_progress-success?style=for-the-badge&logo=none
+
+[brew_url]: https://brew.sh
+
 [wiki_img]: https://img.shields.io/badge/docs-wiki_page-blue?style=for-the-badge&logo=none
+
 [wiki_url]: https://github.com/koddr/json2csv/wiki
+
 [wiki_intents_url]: https://github.com/koddr/json2csv/wiki#intents
+
 [wiki_filter_url]: https://github.com/koddr/json2csv/wiki#filter
+
 [wiki_json_folder_url]: https://github.com/koddr/json2csv/wiki#folder-with-json-files
+
 [wiki_output_folder_url]: https://github.com/koddr/json2csv/wiki#folder-with-output-csv-files
+
 [license_img]: https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none
+
 [license_url]: https://github.com/koddr/json2csv/blob/main/LICENSE
-[json2csv_url]: https://github.com/koddr/json2csv
-[json2csv_go_dev_url]: https://pkg.go.dev/github.com/koddr/json2csv
+
+[repo_url]: https://github.com/koddr/json2csv
+
+[repo_release_url]: https://github.com/koddr/json2csv/releases
+
+[go_dev_url]: https://pkg.go.dev/github.com/koddr/json2csv
+
 [author]: https://github.com/koddr
