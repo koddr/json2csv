@@ -92,14 +92,7 @@ brews:
 
       Next, run json2csv parser with options:
 
-      json2csv \
-        -json    /path/to/input/json/folder \
-        -intents /path/to/intents-file.json \
-        -filter  /path/to/filter-file.json \
-        -output  /path/to/output/csv/folder \
-        -content-field message \
-        -min-word-len  5 \
-        -chunk 1000
+      $ json2csv -json /path/to/input/json/folder -intents /path/to/intents-file.json -filter /path/to/filter-file.json -output /path/to/output/csv/folder -content-field message -min-word-len 5 -chunk 1000
       
       Done! Output CSV file(s) has a default comma (,) separators between columns.
     homepage: "https://github.com/koddr/{{ .ProjectName }}"

@@ -24,6 +24,9 @@ Installation is done by using the [`go install`][go_install] command:
 go install github.com/koddr/json2csv@latest
 ```
 
+> 💡 Note: See the repository's [Release page][repo_release_url], if you want
+> to download a ready-made `deb`, `rpm`, `apk` or `Arch Linux` package.
+
 GNU/Linux and macOS users available way to install via [Homebrew][brew_url]:
 
 ```console
@@ -33,9 +36,6 @@ brew tap koddr/tap
 # Installation:
 brew install koddr/tap/json2csv
 ```
-
-> 💡 Note: See the repository's [Release page][repo_release_url], if you want
-> to download a ready-made `deb`, `rpm`, `apk` or `Arch Linux` package.
 
 Prepare folder with your data input in the `*.json` format, create JSON files
 with intents and filter.
