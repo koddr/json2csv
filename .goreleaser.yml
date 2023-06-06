@@ -1,0 +1,85 @@
+project_name: json2csv
+report_sizes: true
+
+before:
+  hooks: [ "go mod tidy", "go mod download" ]
+
+builds:
+  -
+    id: default
+    env: [ CGO_ENABLED=0 ]
+    goos: [ linux, windows ]
+    goarch: [ amd64, arm64 ]
+
+  - # HACK for macOS Ventura (13.x), which not supported UPX
+    id: macOS_only
+    env: [ CGO_ENABLED=0 ]
+    goos: [ darwin ]
+    goarch: [ amd64, arm64 ]
+
+upx:
+  -
+    ids: [ default ]
+    enabled: true
+    compress: best
+    lzma: true
+    brute: true
+
+brews:
+  -
+    tap:
+      owner: koddr
+      name: homebrew-tap
+      branch: main
+      token: "{{ .Env.GITHUB_TOKEN }}"
+      pull_request:
+        enabled: true
+      git:
+        url: "ssh://git@github.com:koddr/homebrew-tap.git"
+    commit_author:
+      name: Vic Shóstak
+      email: koddr.me@gmail.com
+    commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+    folder: Formula
+    caveats: |
+      After install json2csv, prepare folder with your data input in the *.json format, create JSON files with intents and filter.
+
+      💡 Note: See the repository's Wiki page (https://github.com/koddr/json2csv/wiki) to understand structures of JSON files and get general recommendations for preparing the input data.
+
+      Next, run json2csv parser with options:
+
+      json2csv \
+        -json    /path/to/input/json/folder \
+        -intents /path/to/intents-file.json \
+        -filter  /path/to/filter-file.json \
+        -output  /path/to/output/csv/folder \
+        -content-field message \
+        -min-word-len  5 \
+        -chunk 1000
+      
+      Done! Output CSV file(s) has a default comma (,) separators between columns.
+    homepage: "https://github.com/koddr/{{ .ProjectName }}"
+    description: |
+      The parser can read given folder with *.json files, filtering and qualifying input data with intent & stop words dictionaries and save results to CSV files by given chunk size.
+    license: Apache 2.0
+    skip_upload: false
+
+nfpms:
+  -
+    maintainer: Vic Shóstak <koddr.me@gmail.com>
+    description: |
+      The parser can read given folder with *.json files, filtering and qualifying input data with intent & stop words dictionaries and save results to CSV files by given chunk size.
+    homepage: "https://github.com/koddr/{{ .ProjectName }}"
+    license: Apache 2.0
+    formats: [ deb, rpm, apk, archlinux ]
+
+archives:
+  -
+    format_overrides:
+      - goos: windows
+        format: zip
+    files: [ LICENSE, README.md ]
+    rlcp: true
+
+checksum:
+  name_template: "checksums.txt"
