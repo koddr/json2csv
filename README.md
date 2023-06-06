@@ -109,7 +109,7 @@ robots by [Vic Shóstak][author].
 [go_report_img]: https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none
 [go_report_url]: https://goreportcard.com/report/github.com/koddr/json2csv
 [go_dev_url]: https://pkg.go.dev/github.com/koddr/json2csv
-[code_coverage_img]: https://img.shields.io/badge/code_coverage-in_progress-success?style=for-the-badge&logo=none
+[code_coverage_img]: https://img.shields.io/badge/code_coverage-0%25-success?style=for-the-badge&logo=none
 [brew_url]: https://brew.sh
 [docker_image_url]: https://hub.docker.com/repository/docker/koddr/json2csv
 [wiki_img]: https://img.shields.io/badge/docs-wiki_page-blue?style=for-the-badge&logo=none
