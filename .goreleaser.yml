@@ -141,19 +141,22 @@ checksum:
 changelog:
   sort: asc
   filters:
-    exclude: [ "^*.md:", "^*.ya?ml:" ]
+    exclude: [ "^*.md:", "^*.yml:" ]
   groups:
     - title: Features
-      regexp: ^.*?feature(\([[:word:]]+\))??!?:.+$
+      regexp: ^.*?feature.*?$/gmi
       order: 0
     - title: Bug fixes
-      regexp: ^.*?bug(\([[:word:]]+\))??!?:.+$
+      regexp: ^.*?(bug)|(fix).*?$/gmi
       order: 1
-    - title: Updates
-      regexp: ^.*?update(\([[:word:]]+\))??!?:.+$
+    - title: Improvements
+      regexp: ^.*?improve.*?$/gmi
       order: 2
-    - title: Security issues
-      regexp: ^.*?security(\([[:word:]]+\))??!?:.+$
+    - title: Updates
+      regexp: ^.*?update.*?$/gmi
       order: 3
+    - title: Security issues
+      regexp: ^.*?security.*?$/gmi
+      order: 4
     - title: Others
       order: 999
