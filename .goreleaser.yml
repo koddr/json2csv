@@ -144,19 +144,19 @@ changelog:
     exclude: [ "^*.md:", "^*.yml:" ]
   groups:
     - title: Features
-      regexp: ^.*?feature.*?$/gmi
+      regexp: ^.*?(F|f)eature.*?$
       order: 0
     - title: Bug fixes
-      regexp: ^.*?(bug)|(fix).*?$/gmi
+      regexp: ^.*?((B|b)ug)|((F|f)ix).*?$
       order: 1
     - title: Improvements
-      regexp: ^.*?improve.*?$/gmi
+      regexp: ^.*?(I|i)mprove.*?$
       order: 2
     - title: Updates
-      regexp: ^.*?update.*?$/gmi
+      regexp: ^.*?(U|u)pdate.*?$
       order: 3
     - title: Security issues
-      regexp: ^.*?security.*?$/gmi
+      regexp: ^.*?(S|s)ecurity.*?$
       order: 4
     - title: Others
       order: 999
