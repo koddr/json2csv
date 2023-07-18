@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version: ${{ matrix.go }}
+      - name: Run "govulncheck" scanner
+        run: go run golang.org/x/vuln/cmd/govulncheck@latest -test ./...
       - name: Run go-critic linter
         run: go run github.com/go-critic/go-critic/cmd/gocritic@latest check -enableAll ./...
       - name: Run gosec scanner
