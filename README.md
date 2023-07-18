@@ -2,7 +2,6 @@
 
 [![Go version][go_version_img]][go_dev_url]
 [![Go report][go_report_img]][go_report_url]
-![Code coverage][code_coverage_img]
 [![Wiki][wiki_img]][wiki_url]
 [![License][license_img]][license_url]
 
@@ -66,7 +65,7 @@ free to using our [official Docker image][docker_image_url] and run it from
 isolated container:
 
 ```console
-docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} koddr/json2csv:latest [COMMANDS]
+docker run --rm -it -v ${PWD}:${PWD} -w ${PWD} koddr/json2csv:latest [OPTIONS]
 ```
 
 ## 🧩 Options
