@@ -96,6 +96,8 @@ the second column will contain the associated intents after qualification.
 
 This is what this Go package solves! ✌️
 
+> ⚡️ More details about the case I solved are [here](https://github.com/koddr/json2csv/issues/4#issuecomment-1678605835).
+
 ## ⚠️ License
 
 [`json2csv`][repo_url] is free and open-source software licensed under the
